@@ -34,7 +34,9 @@ function getSaleryNetto (a) {
 	return saleryNetto;
 }
 //5
-function getRandomInt (min, max){
+function getRandomInt (a, b){
+  const max = +a;
+  const min = +b;
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 //6
@@ -82,7 +84,7 @@ container.innerHTML=`
 <p>Max number: ${getMaxDigit(prompt('Write numbers'))};</p>
 <p>Name: ${getNameFirstLetterBig(prompt('Write your name'))};</p>
 <p>Salery Netto: ${getSaleryNetto(prompt('Write your salery Brutto'))};</p>
-<p>Random number: ${getRandomInt(20, 30)};</p>
+<p>Random number: ${getRandomInt(prompt('Write max number'), prompt('Write min number'))};</p>
 <p>Count of latters: ${getCountLetter(prompt('Write a word'), prompt('Write a letter'))};</p>
 <p>Converted curency: ${convertCurency(prompt('Write a sum'))};</p>
 <p>Generated password: ${getRandomPassword(prompt('How lond the password should be. Write a number'))};</p>
