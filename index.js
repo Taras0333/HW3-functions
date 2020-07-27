@@ -78,6 +78,18 @@ function getRandomPassword (a) {
 	return result;
 }
 }
+//9
+function deleteLetter(a){
+  const letters = a.split('');
+  let result = '';
+  for (i = 0; i < a.length; i++){
+    if (a[i] !== 'a'){
+      result += a[i];
+    }
+  }
+  return result;
+}
+
 
 const container=document.querySelector("#container");
 container.innerHTML=`
@@ -88,6 +100,7 @@ container.innerHTML=`
 <p>Count of latters: ${getCountLetter(prompt('Write a word'), prompt('Write a letter'))};</p>
 <p>Converted curency: ${convertCurency(prompt('Write a sum'))};</p>
 <p>Generated password: ${getRandomPassword(prompt('How lond the password should be. Write a number'))};</p>
+<p>Word without 'a': ${deleteLetter(prompt('Write a word you want the (a) to be deleted'))};</p>
 `;
 
 
