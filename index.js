@@ -91,9 +91,8 @@ function deleteLetter(a){
 }
 //10
 function isPalyndrom(a){
-  let split = a.split('');
-  console.log(split);
-  let length = split.length;
+  const split = a.split('');
+  const length = split.length;
 
   for (i = 0; i <= split.length / 2; i++){
     if (split[i] === split[length - (i + 1)]){
