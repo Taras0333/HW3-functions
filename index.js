@@ -1,7 +1,6 @@
 //1
-
 function getMaxDigit(a){
- 	const splitNumber = a.split('');
+	const splitNumber = a.split('');
  	let maxNumber = 0;
  	for (i = 0; i < splitNumber.length; i++){
  		 if (maxNumber < splitNumber[i]) {
@@ -9,7 +8,8 @@ function getMaxDigit(a){
     	}
  	}
  	return maxNumber;
- }
+	}
+	
 //3
 
 function getNameFirstLetterBig (a){
@@ -89,6 +89,21 @@ function deleteLetter(a){
   }
   return result;
 }
+//10
+function isPalyndrom(a){
+  let split = a.split('');
+  console.log(split);
+  let length = split.length;
+
+  for (i = 0; i <= split.length / 2; i++){
+    if (split[i] === split[length - (i + 1)]){
+    return 'true';
+  } else {
+    return 'false';
+  }
+  }
+  
+}
 
 
 const container=document.querySelector("#container");
@@ -101,6 +116,7 @@ container.innerHTML=`
 <p>Converted curency: ${convertCurency(prompt('Write a sum'))};</p>
 <p>Generated password: ${getRandomPassword(prompt('How lond the password should be. Write a number'))};</p>
 <p>Word without 'a': ${deleteLetter(prompt('Write a word you want the (a) to be deleted'))};</p>
+<p>Is your word palyndrom?: ${isPalyndrom(prompt('Write your word, you want to chack on palyndrom'))};</p> 
 `;
 
 
