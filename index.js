@@ -1,15 +1,20 @@
 //1
-function getMaxDigit(a){
-	const splitNumber = a.split('');
- 	let maxNumber = 0;
- 	for (i = 0; i < splitNumber.length; i++){
+	function getMaxDigit(a){
+		if (isNaN(a)){
+			alert('Error, its not a number')
+		} else{
+			let maxNumber = 0;
+    const splitNumber = a.split('');
+ 		for (i = 0; i < splitNumber.length; i++){
  		 if (maxNumber < splitNumber[i]) {
       		maxNumber = splitNumber[i];
     	}
  	}
- 	return maxNumber;
-	}
-	
+return maxNumber;
+		}
+		
+ }
+
 //3
 
 function getNameFirstLetterBig (a){
