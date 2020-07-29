@@ -15,6 +15,7 @@ return maxNumber;
 		
  }
 
+
 //3
 
 function getNameFirstLetterBig (a){
@@ -120,7 +121,7 @@ container.innerHTML=`
 <p>Converted curency: ${convertCurency(prompt('Write a sum'))};</p>
 <p>Generated password: ${getRandomPassword(prompt('How lond the password should be. Write a number'))};</p>
 <p>Word without 'a': ${deleteLetter(prompt('Write a word you want the (a) to be deleted'))};</p>
-<p>Is your word palyndrom?: ${isPalyndrom(prompt('Write your word, you want to chack on palyndrom'))};</p> 
+<p>Is your word palyndrom?: ${isPalyndrom(prompt('Write your word, you want to chack on palyndrom'))};</p>
 `;
 
 
