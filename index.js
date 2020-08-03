@@ -99,10 +99,10 @@ function isPalyndrom(word){
   const length = split.length;
 
   for (let i = 0; i <= split.length / 2; i++){
-    if (split[i] === split[length - (i + 1)]){
+    if (split[i] === split.length - (i + 1)){
     return true;
   } else {
-    return false;
+  	return false;
   }
   }
   
