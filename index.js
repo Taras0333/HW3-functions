@@ -94,17 +94,32 @@ function deleteLetter(word, letter){
   return result;
 }
 //10
-function isPalyndrom(word){
-  const split = word.split('');
-  const length = split.length;
 
-  for (let i = 0; i <= split.length / 2; i++){
-    if (split[i] === split.length - (i + 1)){
-    return true;
+function isPalyndrom(word){
+	let wordsToLowerCase = word.toLowerCase();
+	console.log(wordsToLowerCase);
+  const split = wordsToLowerCase.split('');
+  const string = [];
+  let a = 0;
+  split.forEach(i =>{
+  	if(i === " "){
+  	}else{
+  		string.push(i);
+  	}
+  })
+  let sum = 0;
+
+  for (let n = 0; n <= string.length / 2; n++){
+    if (string[n] === string[string.length - (n + 1)]){
+    sum += 1;
   } else {
-  	return false;
+  	sum += 0;
   }
   }
+  if (sum === Math.ceil(string.length / 2)){
+  	return true;
+  }
+  return false;
   
 }
 
